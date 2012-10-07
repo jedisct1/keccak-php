@@ -17,10 +17,6 @@ $data = "\xde\xad\xbe\xef";
 
 var_dump(bin2hex(keccak_hash($data)));
 var_dump(base64_encode(keccak_hash($data)));
-
-// string(88) "Jkpv6J5fTCUsOoeF25cTwNi+8GzkElvIjJYnG46aX3RTEZscoUyeDuTlN5tg1VjABOYR2ORkdDmNHp2etlgo2Q=="
-// string(88) "Jkpv6J5fTCUsOoeF25cTwNi+8GzkElvIjJYnG46aX3RTEZscoUyeDuTlN5tg1VjABOYR2ORkdDmNHp2etlgo2Q=="
-
 ?>
 --EXPECT--
 bool(true)
