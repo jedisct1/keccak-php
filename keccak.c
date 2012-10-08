@@ -34,9 +34,12 @@
 
 const zend_function_entry keccak_functions[] = {
 	PHP_FE(keccak_hash, NULL)
+#ifdef PHP_FE_END
 	PHP_FE_END
+#else
+	{ NULL, NULL, NULL }
+#endif
 };
-/* }}} */
 
 /* {{{ keccak_module_entry
  */
