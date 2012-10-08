@@ -33,11 +33,11 @@
 #endif
 
 const zend_function_entry keccak_functions[] = {
-	PHP_FE(keccak_hash, NULL)
+    PHP_FE(keccak_hash, NULL)
 #ifdef PHP_FE_END
-	PHP_FE_END
+    PHP_FE_END
 #else
-	{ NULL, NULL, NULL }
+    { NULL, NULL, NULL }
 #endif
 };
 
@@ -45,19 +45,19 @@ const zend_function_entry keccak_functions[] = {
  */
 zend_module_entry keccak_module_entry = {
 #if ZEND_MODULE_API_NO >= 20010901
-	STANDARD_MODULE_HEADER,
+    STANDARD_MODULE_HEADER,
 #endif
-	"keccak",
-	keccak_functions,
-	PHP_MINIT(keccak),
-	PHP_MSHUTDOWN(keccak),
-	NULL,
-	NULL,
-	PHP_MINFO(keccak),
+    "keccak",
+    keccak_functions,
+    PHP_MINIT(keccak),
+    PHP_MSHUTDOWN(keccak),
+    NULL,
+    NULL,
+    PHP_MINFO(keccak),
 #if ZEND_MODULE_API_NO >= 20010901
-	"1.0",
+    "1.0",
 #endif
-	STANDARD_MODULE_PROPERTIES
+    STANDARD_MODULE_PROPERTIES
 };
 /* }}} */
 
@@ -69,7 +69,7 @@ ZEND_GET_MODULE(keccak)
  */
 PHP_MINIT_FUNCTION(keccak)
 {
-	return SUCCESS;
+    return SUCCESS;
 }
 /* }}} */
 
@@ -77,7 +77,7 @@ PHP_MINIT_FUNCTION(keccak)
  */
 PHP_MSHUTDOWN_FUNCTION(keccak)
 {
-	return SUCCESS;
+    return SUCCESS;
 }
 /* }}} */
 
@@ -85,9 +85,9 @@ PHP_MSHUTDOWN_FUNCTION(keccak)
  */
 PHP_MINFO_FUNCTION(keccak)
 {
-	php_info_print_table_start();
-	php_info_print_table_header(2, "keccak support", "enabled");
-	php_info_print_table_end();
+    php_info_print_table_start();
+    php_info_print_table_header(2, "keccak support", "enabled");
+    php_info_print_table_end();
 }
 /* }}} */
 
